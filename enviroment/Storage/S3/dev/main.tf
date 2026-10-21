@@ -19,8 +19,8 @@ module "frontend_bucket" {
 
 module "cloudfront" {
 
-  source = "../../../../modules/Storage/cdn"
-  aws_region =  var.aws_region
+  source      = "../../../../modules/Storage/cdn"
+  aws_region  = var.aws_region
   bucket_name = module.frontend_bucket.bucket_name
 
   bucket_arn = module.frontend_bucket.bucket_arn
@@ -36,7 +36,7 @@ module "cloudfront" {
   acm_certificate_arn = data.terraform_remote_state.acm_global.outputs.certificate_arn
 
   environment = var.environment
-  
+
 
 }
 

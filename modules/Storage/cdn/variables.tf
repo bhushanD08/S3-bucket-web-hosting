@@ -38,5 +38,5 @@ variable "tags" {
 }
 variable "aws_region" {
   description = "AWS Region"
-  
+
 }
